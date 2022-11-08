@@ -2,8 +2,8 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
-class LikeWidget extends StatelessWidget {
-  const LikeWidget({super.key});
+class ShareWidget extends StatelessWidget {
+  const ShareWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +26,7 @@ class LikeWidget extends StatelessWidget {
                   child:  Center(
                     child: IconButton(onPressed: ()=>{
                       print("Likez la video")}
-                    , icon: const Icon(Icons.favorite_border_rounded),
+                    , icon: const Icon(Icons.share),
                     color: Colors.white,),
                   )),
             ),
