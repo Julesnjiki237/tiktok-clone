@@ -9,9 +9,9 @@ const List<Map<String, dynamic>> data = [
     },
     "media": "assets/videos/Videos1.mp4",
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-    "likecount": "12000",
-    "commentcount": "17000",
-    "sharecount" :"250",
+    "likecount": 12000,
+    "commentcount": 17000,
+    "sharecount": 250,
   },
   {
     "profile": {
@@ -21,9 +21,9 @@ const List<Map<String, dynamic>> data = [
     "media": "assets/videos/Videos2.mp4",
     "description":
         "molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborumnumquam blanditiis harum quisquam eius sed odit ",
-    "likecount": "12000",
-    "commentcount": "17000",
-    "sharecount" :"250",
+    "likecount": 12000,
+    "commentcount": 17000,
+    "sharecount": 250,
   },
   {
     "profile": {
@@ -32,19 +32,19 @@ const List<Map<String, dynamic>> data = [
     },
     "media": "assets/videos/Videos3.mp4",
     "description":
-        "optio, eaque rerum! Provident similique accusantium nemo autem. Veritatis obcaecati tenetur iure eius e", 
-    "likecount": "12000",
-    "commentcount": "17000",
-    "sharecount" :"250",
+        "optio, eaque rerum! Provident similique accusantium nemo autem. Veritatis obcaecati tenetur iure eius e",
+    "likecount": 120000,
+    "commentcount": 17000,
+    "sharecount": 250,
   },
   {
     "profile": {"username": "Alan", "avatar": "https://i.pravatar.cc/300?id=7"},
     "media": "assets/videos/Videos4.mp4",
     "description":
         "eveniet aliquid culpa officia aut! Impedit sit sunt quaerat, odit,tenetur error",
-    "likecount": "12000",
-    "commentcount": "17000",
-    "sharecount" :"250",
+    "likecount": 12000,
+    "commentcount": 17000,
+    "sharecount": 250,
   },
   {
     "profile": {
@@ -54,9 +54,9 @@ const List<Map<String, dynamic>> data = [
     "media": "assets/videos/Videos5.mp4",
     "description":
         "harum nesciunt ipsum debitis quas aliquid. Reprehenderit,quia. Quo neque error repudiandae fuga? Ipsa laudantium",
-    "likecount": "12000",
-    "commentcount": "17000",
-    "sharecount" :"250",
+    "likecount": 12000,
+    "commentcount": 17000,
+    "sharecount": 250,
   },
   {
     "profile": {
@@ -66,9 +66,9 @@ const List<Map<String, dynamic>> data = [
     "media": "assets/videos/Videos6.mp4",
     "description":
         "molestias eos sapiente officiis modi at sunt excepturi expedita sint",
-    "likecount": "12000",
-    "commentcount": "17000",
-    "sharecount" :"250",
+    "likecount": 12000,
+    "commentcount": 17000,
+    "sharecount": 250,
   },
 ];
 

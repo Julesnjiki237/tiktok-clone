@@ -5,25 +5,34 @@ import 'package:flutterapi/widgets/like_widget.dart';
 import 'package:flutterapi/widgets/share_widget.dart';
 
 class SidebarComponent extends StatelessWidget {
-  const SidebarComponent({super.key});
+  final Map<String, dynamic> item;
+  const SidebarComponent({super.key, required this.item});
 
   @override
   Widget build(BuildContext context) {
     return Column(
-      children: const [
-          Padding(
-            padding: EdgeInsets.only(bottom: 20.0),
-            child: AvatarWidget(),
+      children:  [
+        Padding(
+          padding: const EdgeInsets.only(bottom: 20.0),
+          child:  AvatarWidget(
+           profile: item['profile'],
           ),
-          Padding(
-            padding: EdgeInsets.only(bottom: 20.0),
-            child: LikeWidget(),
+        ),
+         Padding(
+          padding: const EdgeInsets.only(bottom: 20.0),
+          child: LikeWidget(
+            count: item["likecount"],
           ),
-          Padding(
-            padding: EdgeInsets.only(bottom: 20.0),
-            child: CommentWidget(),
+        ),
+         Padding(
+          padding: const EdgeInsets.only(bottom: 20.0),
+          child: CommentWidget(
+            comment: item['commentcount'],
           ),
-          ShareWidget()
+        ),
+         ShareWidget(
+          share: item['sharecount'],
+        )
       ],
     );
   }

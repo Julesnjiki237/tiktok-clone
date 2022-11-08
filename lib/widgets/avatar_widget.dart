@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class AvatarWidget extends StatelessWidget {
-  const AvatarWidget({super.key});
+  final Map<String, dynamic> profile;
+  const AvatarWidget({super.key, required this.profile});
 
   @override
   Widget build(BuildContext context) {
@@ -23,9 +24,11 @@ class AvatarWidget extends StatelessWidget {
               width: 4.0,
             )
           ),
-          child: const CircleAvatar(
+          child:  CircleAvatar(
       radius: 30.0,
-      backgroundImage: NetworkImage("https://i.pravatar.cc/300?id=6"),
+      backgroundImage: NetworkImage(
+        profile["avatar"]
+      ),
     ))
     ),
         )

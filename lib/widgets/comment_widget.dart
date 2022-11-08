@@ -1,17 +1,19 @@
+
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 class CommentWidget extends StatelessWidget {
-  const CommentWidget({super.key});
+  final int comment;
+  const CommentWidget({super.key, required this.comment});
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
         Padding(
-          padding: const EdgeInsets.only(
-            bottom:8.0),
+          padding: const EdgeInsets.only(bottom: 8.0),
           child: ClipOval(
             child: BackdropFilter(
               filter: ImageFilter.blur(
@@ -23,23 +25,25 @@ class CommentWidget extends StatelessWidget {
                     shape: BoxShape.circle,
                     color: Colors.white.withOpacity(0.1),
                   ),
-                  child:  Center(
-                    child: IconButton(onPressed: ()=>{
-                      print("Likez la video")}
-                    , icon: const Icon(Icons.comment_rounded),
-                    color: Colors.white,),
+                  child: Center(
+                    child: IconButton(
+                      onPressed: () => {print("commenter la video")},
+                      icon: const Icon(Icons.comment_rounded),
+                      color: Colors.white,
+                    ),
                   )),
             ),
           ),
         ),
-        const Text(
-          "200k",
-          style: TextStyle(
+         Text(
+          NumberFormat.compact().format(comment),
+          style:  const TextStyle(
             color: Colors.white,
             fontWeight: FontWeight.w600,
             letterSpacing: .8,
           ),
-        )],
+        )
+      ],
     );
   }
 }

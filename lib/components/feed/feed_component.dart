@@ -22,11 +22,10 @@ class FeedComponent extends StatelessWidget {
           child: 
           ProfileComponent(item: item)
         ),
-        const Positioned(
+         Positioned(
           top: 300.0,
           right: 20.0,
-
-          child: SidebarComponent())
+          child: SidebarComponent(item: item,))
       ],
     
       );
