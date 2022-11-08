@@ -2,36 +2,42 @@ import 'package:flutter/material.dart';
 import 'package:flutterapi/components/feed/feed_component.dart';
 const List<Map<String, dynamic>> data = [
   {
-    "profile": {"username": "Kameroon"},
+    "profile": {"username": "Kameroon",
+    "avatar" : "https://i.pravatar.cc/300?id=1"},
     "media": "assets/videos/Videos1.mp4",
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
   },
   {
-    "profile": {"username": "Kevinho"},
+    "profile": {"username": "Kevinho",
+    "avatar" : "https://i.pravatar.cc/300?id=3"},
     "media": "assets/videos/Videos2.mp4",
     "description":
         "molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborumnumquam blanditiis harum quisquam eius sed odit "
   },
   {
-    "profile": {"username": "Jules"},
+    "profile": {"username": "Jules",
+    "avatar" : "https://i.pravatar.cc/300?id=6"},
     "media": "assets/videos/Videos3.mp4",
     "description":
         "optio, eaque rerum! Provident similique accusantium nemo autem. Veritatis obcaecati tenetur iure eius e"
   },
   {
-    "profile": {"username": "Alan"},
+    "profile": {"username": "Alan",
+    "avatar" : "https://i.pravatar.cc/300?id=7"},
     "media": "assets/videos/Videos4.mp4",
     "description":
         "eveniet aliquid culpa officia aut! Impedit sit sunt quaerat, odit,tenetur error"
   },
   {
-    "profile": {"username": "Clark"},
+    "profile": {"username": "Clark",
+    "avatar" : "https://i.pravatar.cc/300?id=9"},
     "media": "assets/videos/Videos5.mp4",
     "description":
         "harum nesciunt ipsum debitis quas aliquid. Reprehenderit,quia. Quo neque error repudiandae fuga? Ipsa laudantium"
   },
   {
-    "profile": {"username": "Professeur"},
+    "profile": {"username": "Professeur",
+    "avatar" : "https://i.pravatar.cc/300?id=8"},
     "media": "assets/videos/Videos6.mp4",
     "description":
         "molestias eos sapiente officiis modi at sunt excepturi expedita sint"
