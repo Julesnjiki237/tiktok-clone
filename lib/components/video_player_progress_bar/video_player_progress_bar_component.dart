@@ -2,13 +2,20 @@ import 'package:flutter/material.dart';
 
 class VideoPlayerProgressBarComponent extends StatelessWidget {
   final double progress;
-  const VideoPlayerProgressBarComponent({super.key, this.progress = 0});
+  final Function(double)? onTap;
+
+  const VideoPlayerProgressBarComponent(
+      {super.key, this.progress = 0, this.onTap});
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTapUp: (TapUpDetails details) {
-        print(details.globalPosition.dx);
+        if (onTap != null) {
+          onTap!(double.parse((
+                  details.globalPosition.dx / MediaQuery.of(context).size.width)
+              .toStringAsFixed(2)));
+        }
       },
       child: Padding(
           padding: const EdgeInsets.symmetric(
