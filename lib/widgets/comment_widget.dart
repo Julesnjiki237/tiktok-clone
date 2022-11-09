@@ -1,4 +1,3 @@
-
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
@@ -6,7 +5,10 @@ import 'package:intl/intl.dart';
 
 class CommentWidget extends StatelessWidget {
   final int comment;
-  const CommentWidget({super.key, required this.comment});
+  final Function()? onPressed;
+  const CommentWidget({super.key,
+   required this.comment,
+   this.onPressed});
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +29,7 @@ class CommentWidget extends StatelessWidget {
                   ),
                   child: Center(
                     child: IconButton(
-                      onPressed: () => {print("commenter la video")},
+                      onPressed: onPressed,
                       icon: const Icon(Icons.comment_rounded),
                       color: Colors.white,
                     ),
@@ -35,9 +37,9 @@ class CommentWidget extends StatelessWidget {
             ),
           ),
         ),
-         Text(
+        Text(
           NumberFormat.compact().format(comment),
-          style:  const TextStyle(
+          style: const TextStyle(
             color: Colors.white,
             fontWeight: FontWeight.w600,
             letterSpacing: .8,

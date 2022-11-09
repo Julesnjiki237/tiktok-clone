@@ -22,16 +22,19 @@ class SidebarComponent extends StatelessWidget {
           padding: const EdgeInsets.only(bottom: 20.0),
           child: LikeWidget(
             count: item["likecount"],
+            onPressed: () => {print("likez la video")},
           ),
         ),
          Padding(
           padding: const EdgeInsets.only(bottom: 20.0),
           child: CommentWidget(
             comment: item['commentcount'],
+            onPressed: () => {print("Commenter la video")},
           ),
         ),
          ShareWidget(
           share: item['sharecount'],
+          onPressed: () => {print("Partager la video")},
         )
       ],
     );

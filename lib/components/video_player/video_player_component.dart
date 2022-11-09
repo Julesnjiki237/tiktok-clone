@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutterapi/components/video_player_progress_bar/video_player_progress_bar_component.dart';
 import 'package:video_player/video_player.dart';
 
 class VideoPlayerComponent extends StatefulWidget {
@@ -24,14 +25,28 @@ class _VideoPlayerComponentState extends State<VideoPlayerComponent> {
 
         _controller.play();
       });
+    _controller.setLooping(true);
   }
 
   @override
   Widget build(BuildContext context) {
-    return _controller.value.isInitialized
-        ? SizedBox(
-            child: VideoPlayer(_controller),
-          )
-        : Container();
+    return Stack(
+      children: [
+        _controller.value.isInitialized
+            ? SizedBox(
+              width: _controller.value.size.width,
+              height: _controller.value.size.height,
+                child: VideoPlayer(_controller),
+              )
+            : Container(),
+        const Positioned(
+          bottom: 0.0,
+          left: 0.0,
+          right: 0.0,
+          child:  VideoPlayerProgressBarComponent(
+            progress: .3,
+          ))
+      ],
+    );
   }
 }

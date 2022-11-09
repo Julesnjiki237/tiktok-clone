@@ -85,11 +85,11 @@ class HomeScreen extends StatelessWidget {
             return FeedComponent(item: item);
           }).toList()),
       bottomNavigationBar: BottomNavigationBar(
+          backgroundColor: Colors.black,
           currentIndex: 2,
           onTap: (value) => {
                 print(value),
               },
-          backgroundColor: Colors.transparent,
           elevation: 0,
           unselectedItemColor: Colors.blue,
           selectedItemColor: Colors.black,

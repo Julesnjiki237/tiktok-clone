@@ -5,7 +5,10 @@ import 'package:intl/intl.dart';
 
 class ShareWidget extends StatelessWidget {
   final int share;
-  const ShareWidget({super.key, required this.share});
+  final Function()? onPressed;
+  const ShareWidget({super.key,
+   required this.share,
+   this.onPressed});
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +29,7 @@ class ShareWidget extends StatelessWidget {
                   ),
                   child: Center(
                     child: IconButton(
-                      onPressed: () => {print("Partager la video")},
+                      onPressed: onPressed,
                       icon: const Icon(Icons.share),
                       color: Colors.white,
                     ),
